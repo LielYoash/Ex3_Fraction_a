@@ -17,11 +17,17 @@ namespace ariel{
             friend ostream& operator << (ostream& os, const Fraction& fraction);
             Fraction operator +(const Fraction& other);
             bool operator ==(const Fraction& other);
-            // Fraction operator -(const Fraction& other);
-            // Fraction operator *(const Fraction& other);
-            // Fraction operator /(const Fraction& other);
+            Fraction operator -(const Fraction& other);
+            Fraction operator *(const Fraction& other);
+            Fraction operator /(const Fraction& other);
             int findGCD(int a, int b);
-
+            bool operator <(const Fraction& other);
+            bool operator >(const Fraction& other);
+            friend istream& operator >> (istream& is, Fraction& fraction);
+            bool operator <=(const Fraction& other);
+            bool operator >=(const Fraction& other);
+            Fraction operator++(int);
+            Fraction operator--(int);
     };
 }
 
